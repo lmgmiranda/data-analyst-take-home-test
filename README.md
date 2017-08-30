@@ -68,14 +68,33 @@ The way it works:
 To evaluate the feature, address the following questions:
 
 1. Is it a useful feature for our landlords?
-2. Does it influence the acceptance rate of our landlords, i.e. the percentage of bookings accepted?
-3. Does it influence the payment rate of our students, i.e. the percentage of bookings paid?
-4. What more data would you require to evaluate the feature and why?
+2. Is there any pattern in the suggested dates? Could this be used to improve the feature?
+3. Does it influence the acceptance rate of our landlords, i.e. the percentage of bookings accepted?
+4. Does it influence the payment rate of our students, i.e. the percentage of bookings paid?
+5. What more data would you require to evaluate the feature and why?
 
-#### Data
+#### About data
 
 Connect to the MySQL database with the credentials provided to you via email.
 
 Use the `tht_suggest_dates_sample` table.
+
+You will have access to the following fields:
+
+* Booking id,
+* Booking current state,
+* Student request date (requested_at),
+* Landlord acceptance date (accepted_at),
+* Landlord rejection date (rejected_at),
+* Landlord booking expiration date (expired_at),
+* Landlord confirmation date (confirmed_at),
+* Booking withdrawn data (withdrawn_at),
+* New move in date suggested by the landlord (new_move_in_at),
+* Date of creation of the new move-in date (new_move_in_created_at),
+* New move out date suggested by the landlord (new_move_out_at),
+* Date of creation of the new move-out date (new_move_out_created_at),
+* Student payment date (paid_at),
+* Booking discarded date (discarded_at).
+
 
 ### 2.2 Price recommendations

@@ -95,6 +95,7 @@ To use environment variables, call them by their name as in the example below:
 
 ```python
 conn = 'mysql+pymysql'
+# this will read the contents of the variable DATABASE_USER in the /config/.env file
 user = os.environ.get("DATABASE_USER")
 pw   = os.environ.get("DATABASE_PASSWORD")
 host = os.environ.get("DATABASE_HOST")

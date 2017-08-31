@@ -142,4 +142,34 @@ By looking at the following data, what are your main conclusions regarding the r
 
 **Total booking requests per day on offers with price recommendation**
 
+Total number of requests on the offers that were subject to changes.
+
+*Booking requests per day*
+
 ![total_booking_requests_per_day](assets/total_booking_requests_per_day.png)
+
+*Booking requests vs. published dates*
+
+![total_requests_vs_published](assets/total_booking_requests_vs_published.png)
+
+**Number of bookings per offer**
+
+![bookings_per_offer](assets/total_bookings_per_offer.png)
+
+**Requests and offers by total price decrease**
+
+![total_requests_by_price_decrease](assets/total_requests_and_offer_by_decrease.png)
+
+![total_requests_and_offer_by_percent_decrease](assets/total_requests_and_offers_by_percent_decrease.png)
+
+**Average click position on search**
+
+![average_click_position_on_search](assets/average_click_position.png)
+
+**Total clicks by search position**
+
+![total_clicks_by_search_position](assets/total_clicks_by_search_position.png)
+
+**Total clicks per day**
+
+![total_clicks_per_day](assets/total_clicks_per_day.png)

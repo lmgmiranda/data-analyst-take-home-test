@@ -2,7 +2,7 @@
 
 The goal of the PA team is to understand user behavior and use data to uncover product opportunities.
 
-**There is not required format for this test, but you should not spend more than 3 hours on it.**
+There is not required format for this test, but you should not spend more than 3 hours on it.
 
 ## 1 About the challenge
 
@@ -23,13 +23,13 @@ This is a common project structure and it's the one we use at Uniplaces.
 
 Ideally, your answer will be a notebook in the `/notebooks` folder, containing both your code and analysis.
 
-**Nonetheless, any format will do, just make sure you include all the code (SQL, etc.) and analysis (Excel, etc.)**.
+Nonetheless, any format will do, just make sure you include all the code (SQL, etc.) and analysis (Excel, etc.).
 
 ### 1.1 Set up for iPython
 
 #### Clone this repository
 
-Start by cloning the repo:
+Start by cloning the repo, to create a local copy of this folder in your machine:
 
 ```bash
 > git clone https://github.com/uniplaces/data-analyst-take-home-test.git
@@ -38,15 +38,29 @@ Start by cloning the repo:
 
 #### Install Docker
 
-Make sure you have [Docker installed](https://docs.docker.com/engine/installation/).
+[Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) is a tool that can package an application and its dependencies in a virtual container.
 
-#### Credentials
+We use it to make sure that our Data Analysts and Scientists don't have to worry about the environment, this way:
 
-Create a file called `.env` in the `/config` directory.
+* They will have a machine ready
+* With Python 3.6 installed
+* And all the necessary packages, with dependencies managed for them.
 
-Copy the contents of the sample `.env.dist` under `/config` but write the credentials instead of the empty `""`.
+Just make sure you have Docker installed, if you don't please [install it now](https://docs.docker.com/engine/installation/).
 
-You will receive the credentials via email.
+#### Credentials using `python-dotenv`
+
+Python's `dotenv` is used to read key, value pairs from a `.env` file and add them as environment variables.
+
+These environment variables can than be used in your code.
+
+To set this up:
+
+1. Create a file called `.env` in the `/config` directory
+2. Copy the contents of the sample `.env.dist` under `/config` to the new `.env` file you just created
+3. Write the credentials instead of `""`.
+
+You will receive all the credentials via email.
 
 #### Run
 
@@ -56,9 +70,9 @@ To run the iPython notebook server, just type:
 > sudo run-jupyter-notebook.sh
 ```
 
-Copy the link that appears in your terminal window, paste it in your web browser and you're good to go.
+Copy the link that appears in your terminal window, paste it in your web browser and you're good to go!
 
-##### Using the credentials
+#### Using the credentials
 
 To use the credentials use `%load_ext dotenv` and `%dotenv` alongside the imports in the iPython notebook:
 
@@ -77,7 +91,7 @@ import matplotlib.pyplot as plt
 
 Then, all variables defined in `.env` are available as environment variables.
 
-Just call them by their name, as in the example below:
+To use environment variables, call them by their name as in the example below:
 
 ```python
 conn = 'mysql+pymysql'

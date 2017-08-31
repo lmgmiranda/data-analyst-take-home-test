@@ -48,19 +48,19 @@ We use it to make sure that our Data Analysts and Scientists don't have to worry
 
 Just make sure you have Docker installed, if you don't please [install it now](https://docs.docker.com/engine/installation/).
 
-#### Credentials using `python-dotenv`
+#### Credentials using
 
 Python's `dotenv` is used to read key, value pairs from a `.env` file and add them as environment variables.
 
-These environment variables can than be used in your code.
+These environment variables can then be called from your code, in a secure way.
 
 To set this up:
 
-1. Create a file called `.env` in the `/config` directory
+1. Create a new file called `.env` in the `/config` directory
 2. Copy the contents of the sample `.env.dist` under `/config` to the new `.env` file you just created
-3. Write the credentials instead of `""`.
+3. Write the credentials you received in our email instead of the `""`.
 
-You will receive all the credentials via email.
+You will receive all the necessary credentials via email.
 
 #### Run
 

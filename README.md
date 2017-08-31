@@ -48,7 +48,7 @@ We use it to make sure that our Data Analysts and Scientists don't have to worry
 
 Just make sure you have Docker installed, if you don't please [install it now](https://docs.docker.com/engine/installation/).
 
-#### Credentials using
+#### Database credentials
 
 Python's `dotenv` is used to read key, value pairs from a `.env` file and add them as environment variables.
 

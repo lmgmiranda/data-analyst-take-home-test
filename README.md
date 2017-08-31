@@ -48,6 +48,37 @@ All the most common data science packages are there, immediately available to us
 
 If you're using iPython, put the credentials in a `config/.env` file as exemplified in `config/.env.dist`.
 
+To use the credentials use `%load_ext dotenv` and `%dotenv` from the iPython notebook, alongside the imports:
+
+```python
+import os
+import pandas as pd
+import numpy as np
+import sqlalchemy
+import matplotlib.pyplot as plt
+
+%matplotlib notebook
+
+%load_ext dotenv
+%dotenv
+```
+
+Then, simply use them as environment variables:
+
+```python
+conn = 'mysql+pymysql'
+user = os.environ.get("DATABASE_USER")
+pw   = os.environ.get("DATABASE_PASSWORD")
+host = os.environ.get("DATABASE_HOST")
+db   = os.environ.get("DATABASE_DATABASE")
+port = os.environ.get("DATABASE_PORT")
+
+url = '{}://{}:{}@{}:{}/{}'.format(conn, user, pw, host, port, db)
+eng = sqlalchemy.create_engine(url, echo=False)
+
+df = pd.read_sql(sql, eng)
+```
+
 You will receive all the credentials via email.
 
 ## 2 Take home test
@@ -68,7 +99,7 @@ The way it works:
 To evaluate the feature, address the following questions:
 
 1. Is it a useful feature for our landlords?
-2. Is there any pattern in the suggested dates? Could this be used to improve the feature?
+2. Is there any pattern in the suggested dates? Could this be used to improve the feature, or create new ones?
 3. Does it influence the acceptance rate of our landlords, i.e. the percentage of bookings accepted?
 4. Does it influence the payment rate of our students, i.e. the percentage of bookings paid?
 5. What more data would you require to evaluate the feature and why?

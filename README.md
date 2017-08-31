@@ -27,6 +27,8 @@ Ideally, your answer will be a notebook in the `/notebooks` folder, containing b
 
 ### 1.1 Set up for iPython
 
+#### Clone this repository
+
 Start by cloning the repo:
 
 ```bash
@@ -34,7 +36,21 @@ Start by cloning the repo:
 > cd data-analyst-take-home-test
 ```
 
-Make sure you have Docker installed and simply run:
+#### Install Docker
+
+Make sure you have [Docker installed](https://docs.docker.com/engine/installation/).
+
+#### Credentials
+
+Create a file called `.env` in the `/config` directory.
+
+Copy the contents of the sample `.env.dist` under `/config` but write the credentials instead of the empty `""`.
+
+You will receive the credentials via email.
+
+#### Run
+
+To run the iPython notebook server, just type:
 
 ```bash
 > sudo run-jupyter-notebook.sh
@@ -42,13 +58,9 @@ Make sure you have Docker installed and simply run:
 
 Copy the link that appears in your terminal window, paste it in your web browser and you're good to go.
 
-All the most common data science packages are there, immediately available to use.
+##### Using the credentials
 
-### 1.2 Credentials
-
-If you're using iPython, put the credentials in a `config/.env` file as exemplified in `config/.env.dist`.
-
-To use the credentials use `%load_ext dotenv` and `%dotenv` from the iPython notebook, alongside the imports:
+To use the credentials use `%load_ext dotenv` and `%dotenv` alongside the imports in the iPython notebook:
 
 ```python
 import os
@@ -63,7 +75,9 @@ import matplotlib.pyplot as plt
 %dotenv
 ```
 
-Then, simply use them in your code as environment variables (example below):
+Then, all variables defined in `.env` are available as environment variables.
+
+Just call them by their name, as in the example below:
 
 ```python
 conn = 'mysql+pymysql'
@@ -78,8 +92,6 @@ eng  = sqlalchemy.create_engine(url, echo=False)
 
 df   = pd.read_sql(sql, eng)
 ```
-
-You will receive all the credentials via email.
 
 ## 2 Take home test
 

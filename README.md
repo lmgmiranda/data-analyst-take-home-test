@@ -77,7 +77,6 @@ Then, all variables defined in `.env` are available as environment variables.
 To use environment variables, call them by their name as in the example below:
 
 ```python
-conn = 'mysql+pymysql'
 # this will read the contents of the variable DATABASE_USER in the /config/.env file
 user = os.environ.get("DATABASE_USER")
 ```

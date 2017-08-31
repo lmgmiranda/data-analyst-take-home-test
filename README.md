@@ -48,6 +48,12 @@ We use it to make sure that our Data Analysts and Scientists don't have to worry
 
 Just make sure you have Docker installed, if you don't please [install it now](https://docs.docker.com/engine/installation/).
 
+If you're not sure, type on your terminal:
+
+```bash
+> docker --version
+```
+
 #### Database credentials
 
 Unzip the credentials file in `/config`, using the password you received via email.
@@ -77,7 +83,6 @@ Then, all variables defined in `.env` are available as environment variables.
 To use environment variables, call them by their name as in the example below:
 
 ```python
-conn = 'mysql+pymysql'
 # this will read the contents of the variable DATABASE_USER in the /config/.env file
 user = os.environ.get("DATABASE_USER")
 ```

@@ -79,7 +79,7 @@ eng  = sqlalchemy.create_engine(url, echo=False)
 df = pd.read_sql(sql, eng)
 ```
 
-**You will receive all the credentials via email.**
+You will receive all the credentials via email.
 
 ## 2 Take home test
 
@@ -144,11 +144,7 @@ Please address the following questions, analyzing the data below:
 2. What other data would you need to evaluate the feature?
 3. Can you design an experiment leading to more conclusive results? If so, please describe it.
 
-**Total booking requests per day on offers with price recommendation**
-
-Total number of requests on the offers that were subject to changes.
-
-*Booking requests per day*
+#### Total booking requests per day on offers with price recommendation
 
 ![total_booking_requests_per_day](assets/total_booking_requests_per_day.png)
 
@@ -156,24 +152,24 @@ Total number of requests on the offers that were subject to changes.
 
 ![total_requests_vs_published](assets/total_booking_requests_vs_published.png)
 
-**Number of bookings per offer**
+#### Number of bookings per offer with price recommendation
 
 ![bookings_per_offer](assets/total_bookings_per_offer.png)
 
-**Requests and offers by total price decrease**
+#### Requests and offers by total price decrease
 
 ![total_requests_by_price_decrease](assets/total_requests_and_offer_by_decrease.png)
 
 ![total_requests_and_offer_by_percent_decrease](assets/total_requests_and_offers_by_percent_decrease.png)
 
-**Average click position on search**
+#### Average click position on search for offers with price recommendation
 
 ![average_click_position_on_search](assets/average_click_position.png)
 
-**Total clicks by search position**
+#### Total clicks by search position on offers with price recommendation
 
 ![total_clicks_by_search_position](assets/total_clicks_by_search_position.png)
 
-**Total clicks per day**
+#### Total clicks per day on offers with price recommendation
 
 ![total_clicks_per_day](assets/total_clicks_per_day.png)

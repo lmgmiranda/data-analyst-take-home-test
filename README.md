@@ -50,17 +50,7 @@ Just make sure you have Docker installed, if you don't please [install it now](h
 
 #### Database credentials
 
-Python's `dotenv` is used to read key, value pairs from a `.env` file and add them as environment variables.
-
-These environment variables can then be called from your code, in a secure way.
-
-To set this up:
-
-1. Create a new file called `.env` in the `/config` directory
-2. Copy the contents of the sample `.env.dist` under `/config` to the new `.env` file you just created
-3. Write the credentials you received in our email instead of the `""`.
-
-You will receive all the necessary credentials via email.
+Unzip the credentials file in `/config`, using the password you received via email.
 
 #### Run
 
@@ -77,14 +67,7 @@ Copy the link that appears in your terminal window, paste it in your web browser
 To use the credentials use `%load_ext dotenv` and `%dotenv` alongside the imports in the iPython notebook:
 
 ```python
-import os
-import pandas as pd
-import numpy as np
-import sqlalchemy
-import matplotlib.pyplot as plt
-
-%matplotlib notebook
-
+# this is already done for you
 %load_ext dotenv
 %dotenv
 ```
@@ -97,15 +80,6 @@ To use environment variables, call them by their name as in the example below:
 conn = 'mysql+pymysql'
 # this will read the contents of the variable DATABASE_USER in the /config/.env file
 user = os.environ.get("DATABASE_USER")
-pw   = os.environ.get("DATABASE_PASSWORD")
-host = os.environ.get("DATABASE_HOST")
-db   = os.environ.get("DATABASE_DATABASE")
-port = os.environ.get("DATABASE_PORT")
-
-url  = '{}://{}:{}@{}:{}/{}'.format(conn, user, pw, host, port, db)
-eng  = sqlalchemy.create_engine(url, echo=False)
-
-df   = pd.read_sql(sql, eng)
 ```
 
 ## 2 Take home test

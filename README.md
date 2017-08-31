@@ -76,7 +76,7 @@ port = os.environ.get("DATABASE_PORT")
 url  = '{}://{}:{}@{}:{}/{}'.format(conn, user, pw, host, port, db)
 eng  = sqlalchemy.create_engine(url, echo=False)
 
-df  = pd.read_sql(sql, eng)
+df   = pd.read_sql(sql, eng)
 ```
 
 You will receive all the credentials via email.

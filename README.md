@@ -148,8 +148,6 @@ Please address the following questions, analyzing the data below:
 
 ![total_booking_requests_per_day](assets/total_booking_requests_per_day.png)
 
-*Booking requests vs. published dates*
-
 ![total_requests_vs_published](assets/total_booking_requests_vs_published.png)
 
 #### Number of bookings per offer with price recommendation

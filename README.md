@@ -114,7 +114,7 @@ To evaluate the feature, address the following questions:
 
 Connect to the MySQL database with the credentials provided to you via email.
 
-Use the `tht_suggest_dates_sample` table.
+Use the `booking` table.
 
 You will have access to the following fields:
 
